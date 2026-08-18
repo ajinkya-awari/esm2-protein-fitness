@@ -1,0 +1,17 @@
+protein_gym_release: ProteinGym-v1.3
+single_substitutions_only: true
+split:
+  grouping:
+    - uniprot_id
+    - cluster_id
+  min_seq_id: 0.90
+  coverage: 0.80
+  seed: 20260818
+  fractions:
+    train: 0.60
+    validation: 0.20
+    test: 0.20
+models:
+  esm1v_checkpoints: official-five-checkpoint-parity
+  esm2_revision: facebook/esm2_t33_650M_UR50D
+  lora_resource: t4-only
