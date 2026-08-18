@@ -1,0 +1,5 @@
+{"assay_id":"synthetic-assay-01","uniprot_id":"synthetic-protein-01","sequence":"ACDEFGHIKLMNPQRSTVWY","mutation":"A1V","fitness":0.25,"cluster_id":"synthetic-cluster-01"}
+{"assay_id":"synthetic-assay-01","uniprot_id":"synthetic-protein-01","sequence":"ACDEFGHIKLMNPQRSTVWY","mutation":"C2W","fitness":-0.40,"cluster_id":"synthetic-cluster-01"}
+{"assay_id":"synthetic-assay-02","uniprot_id":"synthetic-protein-02","sequence":"MKTAYIAKQRQISFVKSHFS","mutation":"S20A","fitness":0.10,"cluster_id":"synthetic-cluster-02"}
+{"assay_id":"synthetic-assay-02","uniprot_id":"synthetic-protein-02","sequence":"MKTAYIAKQRQISFVKSHFS","mutation":"K2L","fitness":-0.15,"cluster_id":"synthetic-cluster-02"}
+{"assay_id":"synthetic-assay-03","uniprot_id":"synthetic-protein-03","sequence":"GAVLIPFYWSTNQ","mutation":"G1S","fitness":0.80,"cluster_id":"synthetic-cluster-03"}
