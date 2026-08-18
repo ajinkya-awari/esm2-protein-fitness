@@ -19,3 +19,7 @@ Compute Spearman and supervised MSE per assay before macro summaries. Report cou
 ## Artifact boundary
 
 Raw and derived rows, sequences, embeddings, checkpoints, hidden predictions, caches, fitted artifacts, and raw tracking payloads are restricted. Public output is limited to independent synthetic fixtures and sanitized aggregate summaries that pass the privacy checker.
+
+## Implementation status
+
+Offline contracts and gate reporting are implemented and verified. Actual checkpoint inference, ProteinGym processing, final baselines, bootstrap evaluation, and optional LoRA remain platform-gated for the next work session.

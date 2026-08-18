@@ -8,6 +8,8 @@
 
 **Tech Stack:** Python 3.12-compatible standard library first; pytest for tests; optional scientific dependencies declared without automatic installation; PowerShell and Bash wrappers; GitHub remote `ajinkya-awari/esm2-protein-fitness`.
 
+**Current status (2026-08-19):** Offline implementation is verified with 69 tests. Local commit `b4adc7d` contains the model-gate phase and is one commit ahead of the remote. Actual data/checkpoint/GPU stages are deferred to Kaggle/Colab.
+
 ## Global Constraints
 
 - Do not retrieve ProteinGym data, model checkpoints, or other large assets on the local PC.

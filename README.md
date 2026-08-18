@@ -32,3 +32,7 @@ These commands use independent synthetic fixtures and do not retrieve datasets o
 Real-data and model stages are separate gates for Kaggle or Colab. They require explicit opt-in, approved platform-provided assets, and resource checks. An unavailable optional stage is recorded as `skipped`, never silently replaced.
 
 See `docs/PROTOCOL.md`, `docs/COMPUTE_GATES.md`, and `docs/HANDOFF.md` for the scientific contracts, resource boundaries, and current verification state.
+
+## Next session
+
+Synchronize local commit `b4adc7d` to `origin/main`. Then continue on Kaggle or Colab for actual ESM1v, frozen ESM2, optional T4 LoRA, and ProteinGym stages. Keep large assets and heavy computation off the local PC.

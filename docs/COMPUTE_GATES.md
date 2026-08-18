@@ -13,3 +13,10 @@ Real-data and model stages belong on an explicitly approved Kaggle or Colab sess
 ## Transfer and release
 
 Tracking transfer, model/data hosting, publication, deployment, email, and patient-data handling are separate approvals. A public repository commit may contain source and safe documentation only. The privacy checker must pass before any aggregate result enters `results_public/`.
+
+## Next-session checklist
+
+1. Synchronize the pending local commit before using the source remotely.
+2. Confirm Kaggle/Colab asset paths and exact model revisions.
+3. Run the model-gate report and preserve every `skipped` or `failed` result.
+4. Keep restricted artifacts on the approved platform.

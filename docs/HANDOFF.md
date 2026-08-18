@@ -37,7 +37,7 @@ The local Python interpreter is 3.11.9 and pytest is 9.0.3. A Bash wrapper regre
 - Frozen ESM2 actual embeddings: not run; no checkpoint or heavy CPU work is present. The offline shape/delta contract is tested.
 - LoRA: skipped; no T4 session is active.
 - W&B/Hugging Face transfer, publication, deployment, email, and patient-data handling: not run.
-- Remote synchronization: completed by the repository owner; `origin/main` matches local commit `ba354c2f35058b8de12876d7984aecb0c7a7f6c5`.
+- Remote synchronization: last remote commit is `05deb53224c30392ebcc38378b47c4289bde7dbe`; local model-gate commit `b4adc7d64165738b71cd56efc090b2f82016186c` is ahead by one and must be synchronized before the next session.
 
 ## Model-gate phase
 
@@ -56,3 +56,11 @@ The local Python interpreter is 3.11.9 and pytest is 9.0.3. A Bash wrapper regre
 ## Next authorized action
 
 Use Kaggle or Colab for the explicitly authorized ESM1v, frozen ESM2, and optional T4 LoRA gates without changing the local offline default.
+
+## Next-session checklist
+
+1. Synchronize local commit `b4adc7d` to `origin/main`.
+2. Open Kaggle or Colab with approved assets; keep them off this PC.
+3. Run the model-gate report before any model stage.
+4. Run actual ESM1v parity, frozen ESM2 smoke, and optional T4 LoRA only on the approved platform.
+5. Record revisions, skips, metrics, privacy results, and the next handoff.
