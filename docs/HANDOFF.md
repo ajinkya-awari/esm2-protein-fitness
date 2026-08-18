@@ -36,7 +36,7 @@ The local Python interpreter is 3.11.9 and pytest is 9.0.3. A Bash wrapper regre
 - Frozen ESM2 embeddings: not run; no checkpoint or heavy CPU work is present.
 - LoRA: skipped; no T4 session is active.
 - W&B/Hugging Face transfer, publication, deployment, email, and patient-data handling: not run.
-- Remote synchronization: normal commands were attempted after local commits but blocked by the host Project 15 safety hook requiring explicit authorization, despite the owner's authorization.
+- Remote synchronization: completed by the repository owner; `origin/main` matches local commit `ba354c2f35058b8de12876d7984aecb0c7a7f6c5`.
 
 ## Next authorized action
 
