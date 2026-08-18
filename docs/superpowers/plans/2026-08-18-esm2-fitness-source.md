@@ -179,7 +179,7 @@
 
 **Interfaces:**
 - `assign_groups(group_keys: Sequence[str], seed: int, fractions: Mapping[str, float]) -> dict[str, str]`
-- `validate_group_disjointness(assignments: Mapping[str, str]) -> None`
+- `validate_group_disjointness(observations: Sequence[tuple[str, str]]) -> None`
 - `manifest_hash(assignments: Mapping[str, str]) -> str`
 
 - [ ] **Step 1: Write tests for determinism and group disjointness.**
