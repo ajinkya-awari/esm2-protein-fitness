@@ -10,11 +10,14 @@ The local default is intentionally small and offline:
 python -m pytest -q
 python -m esm2_fitness.pipeline check
 python -m esm2_fitness.pipeline synthetic
+python -m esm2_fitness.pipeline gates
 ```
 
 On Windows, use `./run.ps1 check` or `./run.ps1 synthetic`. On Bash-based environments, use `./run.sh check` or `./run.sh synthetic`. These wrappers set the source path and select the available Python executable; they do not install packages or retrieve assets.
 
 These commands use independent synthetic fixtures and do not retrieve datasets or model checkpoints. They do not run full embeddings, training, UMAP, or large evaluations.
+
+`gates` reports the ESM1v, frozen ESM2, and LoRA stages as structured `skipped` until their approved checkpoint/data or T4 environment is available.
 
 ## Source layout
 

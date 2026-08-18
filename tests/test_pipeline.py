@@ -1,4 +1,5 @@
 from pathlib import Path
+import json
 import shutil
 import subprocess
 
@@ -55,3 +56,13 @@ def test_bash_wrapper_runs_the_lightweight_check():
 
     assert completed.returncode == 0, completed.stderr
     assert "offline" in completed.stdout
+
+
+def test_gates_command_reports_model_stages_without_running_them(capsys):
+    result = main(["gates"])
+
+    statuses = json.loads(capsys.readouterr().out)
+
+    assert result == 0
+    assert {status["stage"] for status in statuses} == {"esm1v", "esm2", "lora"}
+    assert all(status["status"] == "skipped" for status in statuses)

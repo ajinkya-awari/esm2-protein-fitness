@@ -404,3 +404,54 @@
 - [ ] `python -m esm2_fitness.pipeline synthetic` returns exit code 0.
 - [ ] A local scan finds no `.env`, checkpoint, embedding, hidden-prediction, cache, or fitted-artifact files.
 - [ ] The handoff records the blocked or completed remote synchronization attempt without claiming unrun external gates.
+
+---
+
+## Platform-gated model contracts
+
+These follow-up tasks are intentionally offline-safe. They validate interfaces and resource decisions only; they do not retrieve ProteinGym data or checkpoints and do not run model inference.
+
+### Task 9: ESM1v parity contract
+
+**Files:**
+- Create: `src/esm2_fitness/esm1v.py`
+- Create: `tests/test_esm1v.py`
+
+**Interfaces:** `validate_official_checkpoints`, `score_masked_marginal`, and `score_with_official_checkpoints` enforce the ordered five-checkpoint contract and accept only an injected fake/provider scorer.
+
+**Verification:** `python -m pytest tests/test_esm1v.py -q` passes using no checkpoint or network.
+
+### Task 10: Frozen ESM2 feature contract
+
+**Files:**
+- Create: `src/esm2_fitness/embeddings.py`
+- Create: `tests/test_embeddings.py`
+
+**Interfaces:** `validate_embedding_pair` checks finite equal dimensions and `pooled_mutant_minus_wt` returns the pooled mutant-minus-WT delta. No model library is imported.
+
+**Verification:** `python -m pytest tests/test_embeddings.py -q` passes using tiny in-memory vectors.
+
+### Task 11: T4-only LoRA gate
+
+**Files:**
+- Create: `src/esm2_fitness/resources.py`
+- Create: `tests/test_resources.py`
+
+**Interfaces:** `evaluate_lora_gate` checks T4 availability, VRAM, target modules, and output shape. It returns `ready` only when every gate passes and otherwise returns a structured `skipped` status.
+
+**Verification:** `python -m pytest tests/test_resources.py -q` passes without a GPU or training dependency.
+
+### Task 12: Automatic model-gate reporting
+
+**Files:**
+- Modify: `src/esm2_fitness/pipeline.py`
+- Modify: `tests/test_pipeline.py`
+- Modify: `README.md`
+- Modify: `docs/COMPUTE_GATES.md`
+- Modify: `docs/HANDOFF.md`
+
+**Interfaces:** `python -m esm2_fitness.pipeline gates` emits JSON statuses for ESM1v, ESM2, and LoRA; the command performs no model/data access and exits 0 when gates are intentionally skipped.
+
+**Verification:** run the focused model-gate tests, then `python -m compileall src tests`, `python -m pytest -q`, `python -m esm2_fitness.pipeline check`, `python -m esm2_fitness.pipeline synthetic`, and `python -m esm2_fitness.pipeline gates`.
+
+**Status:** Offline contracts and automatic skip reporting implemented and verified. Actual model/data/GPU execution remains platform-gated.

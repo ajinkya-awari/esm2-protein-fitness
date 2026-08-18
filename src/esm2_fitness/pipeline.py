@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Sequence
 
 from .schema import MutationRow
+from .resources import evaluate_lora_gate
 from .sequences import parse_substitution, reconstruct_sequences
 from .splits import assign_groups, validate_group_disjointness
 from .status import StageStatus
@@ -66,11 +67,30 @@ def _run_real(data_dir: str | None, allow_external_data: bool) -> int:
     return 2
 
 
+def _run_gates() -> int:
+    statuses = [
+        StageStatus.skipped("esm1v", "official checkpoints are not present locally", "checkpoint"),
+        StageStatus.skipped("esm2", "frozen model asset is not present locally", "checkpoint"),
+        evaluate_lora_gate(
+            t4_available=False,
+            vram_gb=0.0,
+            required_vram_gb=12.0,
+            target_modules=("q_proj", "v_proj"),
+            required_target_modules=("q_proj", "v_proj"),
+            expected_output_dim=1,
+            actual_output_dim=1,
+        ),
+    ]
+    print(json.dumps([asdict(status) for status in statuses], sort_keys=True))
+    return 0
+
+
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Offline-safe Project 15 pipeline")
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("check", help="run lightweight offline checks")
     subparsers.add_parser("synthetic", help="run independent synthetic fixture flow")
+    subparsers.add_parser("gates", help="report model and resource gates without running them")
     real = subparsers.add_parser("real", help="gate real-data/model stages")
     real.add_argument("--data-dir")
     real.add_argument("--allow-external-data", action="store_true")
@@ -83,6 +103,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         return _run_check()
     if args.command == "synthetic":
         return _run_synthetic()
+    if args.command == "gates":
+        return _run_gates()
     return _run_real(args.data_dir, args.allow_external_data)
 
 

@@ -4,6 +4,8 @@
 
 Allowed local work is lightweight schema, sequence, split, metric, provenance, privacy, compile, and synthetic-fixture verification. The default commands do not retrieve data or checkpoints and do not run full ESM2 embedding, training, UMAP, or large evaluation.
 
+`python -m esm2_fitness.pipeline gates` performs only a decision report. It emits ESM1v checkpoint, frozen ESM2 asset, and LoRA T4 statuses without importing model libraries or accessing the network.
+
 ## Kaggle or Colab
 
 Real-data and model stages belong on an explicitly approved Kaggle or Colab session with platform-provided assets. A runner must verify the data path, model revision, GPU/resource class, target modules, output shape, runtime, and memory before optional LoRA. It must write `skipped` when a gate is unavailable or fails.
