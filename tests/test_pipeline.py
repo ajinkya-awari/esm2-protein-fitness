@@ -66,3 +66,11 @@ def test_gates_command_reports_model_stages_without_running_them(capsys):
     assert result == 0
     assert {status["stage"] for status in statuses} == {"esm1v", "esm2", "lora"}
     assert all(status["status"] == "skipped" for status in statuses)
+
+
+def test_powershell_wrapper_exposes_gates_command():
+    wrapper = Path(__file__).parents[1] / "run.ps1"
+
+    text = wrapper.read_text(encoding="utf-8")
+
+    assert 'ValidateSet("check", "synthetic", "real", "gates")' in text

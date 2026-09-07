@@ -22,4 +22,4 @@ Raw and derived rows, sequences, embeddings, checkpoints, hidden predictions, ca
 
 ## Implementation status
 
-Offline contracts and gate reporting are implemented and verified. Actual checkpoint inference, ProteinGym processing, final baselines, bootstrap evaluation, and optional LoRA remain platform-gated for the next work session.
+Offline contracts, gate reporting, task/evaluator/model contracts, checksum manifests, explainability boundaries, and Kaggle preparation are implemented and verified on synthetic fixtures. Actual checkpoint inference, ProteinGym processing, final baselines, bootstrap evaluation, and optional LoRA remain platform-gated for a separately approved work session.

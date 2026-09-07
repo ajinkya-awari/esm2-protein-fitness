@@ -1,6 +1,6 @@
 param(
     [Parameter(Position = 0)]
-    [ValidateSet("check", "synthetic", "real")]
+    [ValidateSet("check", "synthetic", "real", "gates")]
     [string] $Command = "check",
 
     [Parameter(ValueFromRemainingArguments = $true)]

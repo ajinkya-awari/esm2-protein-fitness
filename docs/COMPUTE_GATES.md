@@ -16,7 +16,9 @@ Tracking transfer, model/data hosting, publication, deployment, email, and patie
 
 ## Next-session checklist
 
-1. Synchronize the pending local commit before using the source remotely.
-2. Confirm Kaggle/Colab asset paths and exact model revisions.
-3. Run the model-gate report and preserve every `skipped` or `failed` result.
-4. Keep restricted artifacts on the approved platform.
+Current next task (2026-08-30): run the notebook through cells 1–8 and stop at the approval gate.
+
+1. Review `notebooks/KAGGLE_RUNBOOK_esm2_protein.md`.
+2. Run `notebooks/kaggle_esm2_protein.ipynb` cells 1-8 in order.
+3. Stop at the approval gate unless explicit model/data/GPU approval is recorded.
+4. Preserve every `skipped` or `failed` result and keep restricted artifacts on the approved platform.

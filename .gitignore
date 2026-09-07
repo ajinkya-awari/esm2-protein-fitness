@@ -22,3 +22,4 @@ fitted_artifacts/
 *.db
 wandb/
 results_restricted/
+docs/superpowers/
