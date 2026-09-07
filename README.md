@@ -180,7 +180,7 @@ The `privacy.check_public_path` and `privacy.check_public_metadata` functions en
 | `python -m pytest -q` (87 tests) | ✅ **Locally verified** — 87 passed, 0.78s | 2026-09-07 |
 | `pipeline check / synthetic / gates` | ✅ **Locally verified** — exit 0 | 2026-09-07 |
 | Schema, split, metric, privacy contracts | ✅ **Locally verified** (synthetic fixtures) | 2026-09-07 |
-| Kaggle notebook Stage A (env / source) | ⏳ **Pending** — kernel pushed, awaiting run | 2026-09-07 |
+| Kaggle notebook Stage A (env / source / 87 tests / gates) | ✅ **Verified** — kernel v3, 87 passed 0.25s, approval gate closed | 2026-09-07 |
 | ProteinGym acquisition | 🔒 **Blocked** — requires explicit data approval | — |
 | ESM1v parity (5 checkpoints) | 🔒 **Blocked** — requires checkpoint approval | — |
 | Frozen ESM2 inference | 🔒 **Blocked** — requires model approval | — |
@@ -228,7 +228,7 @@ If you use this benchmark framework, please cite the underlying resources:
 
 ## Roadmap
 
-- [ ] Kaggle Stage A: environment and source validation (kernel pushed 2026-09-07)
+- [x] Kaggle Stage A: environment, source, 87 tests, all gates — verified kernel v3 (2026-09-07)
 - [ ] Kaggle Stage B+: ProteinGym acquisition and processing (pending data approval)
 - [ ] ESM1v parity run on official five checkpoints (pending checkpoint approval)
 - [ ] Frozen ESM2 representation extraction (pending model approval)
