@@ -1,0 +1,26 @@
+{
+  "macro_mse": {
+    "assay_id": "macro",
+    "failure_count": 0,
+    "metric": "mse",
+    "n_assays": 40,
+    "n_total": 400,
+    "n_used": 400,
+    "reason": null,
+    "status": "completed",
+    "value": 0.8882612231143792
+  },
+  "macro_spearman": {
+    "assay_id": "macro",
+    "failure_count": 0,
+    "metric": "macro",
+    "n_assays": 0,
+    "n_total": 0,
+    "n_used": 0,
+    "reason": "no completed assays",
+    "status": "skipped",
+    "value": null
+  },
+  "model": "median_baseline",
+  "n_assays_completed": 0
+}

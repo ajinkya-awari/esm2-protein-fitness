@@ -1,0 +1,26 @@
+{
+  "macro_mse": {
+    "assay_id": "macro",
+    "failure_count": 0,
+    "metric": "mse",
+    "n_assays": 40,
+    "n_total": 400,
+    "n_used": 400,
+    "reason": null,
+    "status": "completed",
+    "value": 0.7490776294283604
+  },
+  "macro_spearman": {
+    "assay_id": "macro",
+    "failure_count": 0,
+    "metric": "spearman",
+    "n_assays": 40,
+    "n_total": 400,
+    "n_used": 400,
+    "reason": null,
+    "status": "completed",
+    "value": 0.26631299310708023
+  },
+  "model": "esm2_ridge_baseline",
+  "n_assays_completed": 40
+}

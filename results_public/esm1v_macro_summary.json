@@ -1,0 +1,26 @@
+{
+  "macro_mse": {
+    "assay_id": "macro",
+    "failure_count": 15,
+    "metric": "mse",
+    "n_assays": 40,
+    "n_total": 400,
+    "n_used": 385,
+    "reason": null,
+    "status": "completed",
+    "value": 36.86372111670914
+  },
+  "macro_spearman": {
+    "assay_id": "macro",
+    "failure_count": 15,
+    "metric": "spearman",
+    "n_assays": 40,
+    "n_total": 400,
+    "n_used": 385,
+    "reason": null,
+    "status": "completed",
+    "value": 0.47519830685213293
+  },
+  "model": "esm1v_5ckpt_masked_marginal",
+  "n_assays_completed": 40
+}
