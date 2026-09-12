@@ -1,6 +1,15 @@
 # ESM2 Protein Mutation-Fitness Benchmark
 
+[![Demo on HuggingFace Spaces](https://img.shields.io/badge/🤗%20HF%20Space-Live%20Demo-blue)](https://huggingface.co/spaces/ajinkya1807/esm2-protein-fitness)
+[![Kaggle Kernel](https://img.shields.io/badge/Kaggle-Kernel%20v17-20BEFF?logo=kaggle)](https://www.kaggle.com/code/ajinkya1225/15-esm2-protein-mutation-fitness-benchmark)
+[![Dataset](https://img.shields.io/badge/Kaggle-Dataset-20BEFF?logo=kaggle)](https://www.kaggle.com/datasets/ajinkya1225/esm2-protein-fitness-source)
+[![Data: ProteinGym v1](https://img.shields.io/badge/🤗%20Data-ProteinGym%20v1-yellow)](https://huggingface.co/datasets/OATML-Markslab/ProteinGym_v1)
+
 A reproducible, leakage-aware benchmark comparing frozen ESM1v and ESM2 representations against simple supervised baselines on ProteinGym single amino-acid substitution assays.
+
+**Live demo:** https://huggingface.co/spaces/ajinkya1807/esm2-protein-fitness  
+**Kaggle execution kernel:** https://www.kaggle.com/code/ajinkya1225/15-esm2-protein-mutation-fitness-benchmark  
+**Source dataset:** https://www.kaggle.com/datasets/ajinkya1225/esm2-protein-fitness-source
 
 > **Research artifact.** This repository is an auditable reproducibility framework — not a clinical, experimental, commercial, or causal claim. No superior performance, biological discovery, or deployment readiness is asserted.
 
