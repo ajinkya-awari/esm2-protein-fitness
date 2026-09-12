@@ -1,9 +1,16 @@
-# ESM2 Protein Mutation-Fitness Benchmark
+<div align="center">
 
-[![Demo on HuggingFace Spaces](https://img.shields.io/badge/🤗%20HF%20Space-Live%20Demo-blue)](https://huggingface.co/spaces/ajinkya1807/esm2-protein-fitness)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=ESM2%20Protein%20Fitness&fontSize=48&fontColor=fff&animation=twinkling&fontAlignY=38&desc=Reproducible%20benchmark%3A%20ESM1v%20vs%20ESM2%20vs%20Median%20on%2040%20ProteinGym%20assays&descAlignY=58&descAlign=50&descSize=16"/>
+
+[![HF Space](https://img.shields.io/badge/%F0%9F%A4%97%20HF%20Space-Live%20Demo-blue)](https://huggingface.co/spaces/ajinkya1807/esm2-protein-fitness)
 [![Kaggle Kernel](https://img.shields.io/badge/Kaggle-Kernel%20v17-20BEFF?logo=kaggle)](https://www.kaggle.com/code/ajinkya1225/15-esm2-protein-mutation-fitness-benchmark)
 [![Dataset](https://img.shields.io/badge/Kaggle-Dataset-20BEFF?logo=kaggle)](https://www.kaggle.com/datasets/ajinkya1225/esm2-protein-fitness-source)
-[![Data: ProteinGym v1](https://img.shields.io/badge/🤗%20Data-ProteinGym%20v1-yellow)](https://huggingface.co/datasets/OATML-Markslab/ProteinGym_v1)
+[![ProteinGym v1](https://img.shields.io/badge/%F0%9F%A4%97%20Data-ProteinGym%20v1-yellow)](https://huggingface.co/datasets/OATML-Markslab/ProteinGym_v1)
+[![Tests](https://img.shields.io/badge/tests-87%20passing-brightgreen)](tests/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![GitHub](https://img.shields.io/badge/GitHub-ajinkya--awari%2Fesm2--protein--fitness-181717?logo=github)](https://github.com/ajinkya-awari/esm2-protein-fitness)
+
+</div>
 
 A reproducible, leakage-aware benchmark comparing frozen ESM1v and ESM2 representations against simple supervised baselines on ProteinGym single amino-acid substitution assays.
 
@@ -267,9 +274,11 @@ If you use this benchmark framework, please cite the underlying resources:
 - [ ] Full-assay ESM1v + ESM2 scoring (requires T4 or newer GPU, CUDA sm_70+)
 - [ ] Grouped bootstrap confidence intervals (requires full-assay data)
 - [ ] Optional T4 LoRA run (requires T4 gate + approval)
-- [ ] HuggingFace Space demo
+- [x] HuggingFace Space demo — live at https://huggingface.co/spaces/ajinkya1807/esm2-protein-fitness
 
 ---
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer"/>
 
 ## License
 
